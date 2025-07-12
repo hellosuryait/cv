@@ -158,6 +158,14 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-
+  
+  <!-- ✅ Your custom popup script -->
+  <script>
+    window.onload = function () {
+      if (window.location.href.includes('submitted=true')) {
+        alert('Submitted successfully!');
+      }
+    };
+  </script>
 </body>
 </html>
