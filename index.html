@@ -91,45 +91,7 @@
 
     </div>
 
-    <!-- Contact -->
-<section id="contact">
-  <div class="inner">
-    <section>
-      <form id="contact-form">
-        <div class="fields">
-          <div class="field half">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-          <div class="field half">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="6" required></textarea>
-          </div>
-        </div>
-        <ul class="actions">
-          <li><input type="submit" value="Send Message" class="primary" /></li>
-          <li><input type="reset" value="Clear" /></li>
-        </ul>
-      </form>
-    </section>
-    <section class="split">
-      <section>
-        <div class="contact-method">
-          <span class="icon solid alt fa-envelope"></span>
-          <h3>Email</h3>
-          <a href="mailto:suryadas131@gmail.com">suryadas131@gmail.com</a>
-        </div>
-      </section>
-    </section>
-  </div>
-</section>
-
-<!-- Submission Script -->
-<script>
+  <script>
   document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -156,11 +118,12 @@
       }
     })
     .catch(err => {
-      console.error('Error:', err);
+      console.error('Fetch Error:', err);
       alert('Something went wrong!');
     });
   });
 </script>
+
 
     <!-- Footer -->
     <footer id="footer">
