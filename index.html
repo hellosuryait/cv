@@ -161,11 +161,15 @@
   
   <!-- ✅ Your custom popup script -->
   <script>
-    window.onload = function () {
-      if (window.location.href.includes('submitted=true')) {
-        alert('Submitted successfully!');
-      }
-    };
-  </script>
+  window.onload = function () {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("submitted") === "true") {
+      alert("Submitted successfully!");
+      // ✅ Remove the query param so it doesn't show again on refresh
+      url.searchParams.delete("submitted");
+      window.history.replaceState({}, document.title, url.pathname);
+    }
+  };
+</script>
 </body>
 </html>
